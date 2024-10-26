@@ -43,10 +43,27 @@ const Header = () => {
                 <li className="px-3">
                   <Link href="/">Home</Link>
                 </li>
-                <li className="px-3">
-                  <Link href="kebab-akabane">Our Shop</Link>
-                </li>
 
+                <li className="px-3">
+                  <Link href="about">Our SHop</Link>
+                  <i className="las la-angle-down" />
+                  <ul>
+                    <li>
+                      <Link href="kebab-akabane"> King Kebab Akabane</Link>
+                    </li>
+                    <li>
+                      <Link href="kebab-jujo">king Kebab Juju</Link>
+                    </li>
+                    <li>
+                      <Link href="kebab-higashijujo">
+                        king Kebab Higashijujo
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="">Comming Soon....</Link>
+                    </li>
+                  </ul>
+                </li>
                 <li className="px-3">
                   <Link href="about">ABOUT US</Link>
                 </li>
@@ -83,16 +100,16 @@ const Header = () => {
               <i className="las la-angle-down" />
               <ul style={activeLi("Menu")}>
                 <li>
-                  <Link href="menu-coffee">Tokyo Sushi Delight</Link>
+                  <Link href="kebab-akabane"> King Kebab Akabane</Link>
                 </li>
                 <li>
-                  <Link href="menu-restaurant">Osaka Ramen House</Link>
+                  <Link href="kebab-jujo">king Kebab Juju</Link>
                 </li>
                 <li>
-                  <Link href="menu-restaurant">Kyoto Matcha Café</Link>
+                  <Link href="kebab-higashijujo">king Kebab Higashijujo</Link>
                 </li>
                 <li>
-                  <Link href="menu-restaurant">Hokkaido Grill & BBQ</Link>
+                  <Link href="">Comming Soon</Link>
                 </li>
               </ul>
             </li>

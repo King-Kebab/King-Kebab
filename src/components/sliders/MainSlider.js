@@ -18,7 +18,7 @@ const MainSlider = () => {
                   finest ingredients.
                 </div>
                 <h2 className="name text-anim-1" data-splitting="chars">
-                  Tokyo Sushi <br />
+                  King Kebab Akabane <br />
                   Delight Shop
                 </h2>
                 <div className="kf-bts">
@@ -44,9 +44,9 @@ const MainSlider = () => {
                   signature ramen bowls.
                 </div>
                 <h2 className="name text-anim-1" data-splitting="chars">
-                  Osaka Ramen
+                  king kebab
                   <br />
-                  House
+                  jujo(king curry)
                 </h2>
                 <div className="kf-bts">
                   <Link href="menu-coffee" className="kf-btn dark-btn">
@@ -71,8 +71,9 @@ const MainSlider = () => {
                   delicate Japanese sweets.
                 </div>
                 <h2 className="name text-anim-1" data-splitting="chars">
-                  Kyoto Matcha <br />
-                  Café
+                  king kebeb
+                  <br />
+                  higashijujo Café
                 </h2>
                 <div className="kf-bts">
                   <Link href="menu-coffee" className="kf-btn">
@@ -97,15 +98,9 @@ const MainSlider = () => {
                   seafood, grilled to perfection.
                 </div>
                 <h2 className="name text-anim-1" data-splitting="chars">
-                  Hokkaido Grill & <br />
-                  BBQ
+                  Comming Soon... <br />
                 </h2>
-                <div className="kf-bts">
-                  <Link href="menu-coffee" className="kf-btn dark-btn">
-                    <span>explore more</span>
-                    <i className="fas fa-chevron-right" />
-                  </Link>
-                </div>
+                <div className="kf-bts"></div>
               </div>
             </div>
           </div>

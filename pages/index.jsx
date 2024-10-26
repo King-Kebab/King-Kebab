@@ -74,13 +74,13 @@ const Index = () => {
                 data-animate="active"
               >
                 <div className="image kf-image-hover">
-                  <Link href="menu-restaurant">
+                  <Link href="kebab-akabane">
                     <img src="images/shop (1).png" alt="image" />
                   </Link>
                 </div>
                 <div className="desc">
                   
-                  <h5 className="name">Tokyo Sushi Delight</h5>
+                  <h5 className="name">King Kebab Akabane</h5>
                 </div>
               </div>
             </div>
@@ -90,13 +90,13 @@ const Index = () => {
                 data-animate="active"
               >
                 <div className="image kf-image-hover">
-                  <Link href="menu-coffee">
+                  <Link href="kebab-jujo">
                     <img src="images/shop (2).png" alt="image" />
                   </Link>
                 </div>
                 <div className="desc">
                  
-                  <h5 className="name">Osaka Ramen House</h5>
+                  <h5 className="name">king kebab jujo(king curry)</h5>
                 </div>
               </div>
             </div>
@@ -106,13 +106,13 @@ const Index = () => {
                 data-animate="active"
               >
                 <div className="image kf-image-hover">
-                  <Link href="services">
+                  <Link href="kebab-higashijujo">
                     <img src="images/shop (3).png" alt="image" />
                   </Link>
                 </div>
                 <div className="desc">
                  
-                  <h5 className="name">Kyoto Matcha Café</h5>
+                  <h5 className="name">king kebeb higashijujo</h5>
                 </div>
               </div>
             </div>
@@ -122,13 +122,13 @@ const Index = () => {
                 data-animate="active"
               >
                 <div className="image kf-image-hover">
-                  <Link href="services">
+                 
                     <img src="images/shop (4).png" alt="image" />
-                  </Link>
+                  
                 </div>
                 <div className="desc">
                  
-                  <h5 className="name">Hokkaido Grill & BBQ</h5>
+                  <h5 className="name">Comming Soon.....</h5>
                 </div>
               </div>
             </div>

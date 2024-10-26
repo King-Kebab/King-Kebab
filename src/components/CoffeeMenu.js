@@ -1,8 +1,19 @@
-import Link from "next/link";
 const CoffeeMenu = () => {
+  const images = [
+    "images/image (1).jpg",
+    "images/image (2).jpg",
+    "images/image (3).jpg",
+    "images/image (4).jpg",
+    "images/image (5).jpg",
+    "images/image (6).jpg",
+    "images/image (7).jpg",
+    "images/image (8).jpg",
+    "images/image (9).jpg",
+  ];
+
   return (
     <div>
-      <div className="kf-titles text-center">
+      <div className="kf-titles text-center grid-title">
         <div
           className="kf-subtitle element-anim-1 scroll-animate"
           data-animate="active"
@@ -13,12 +24,15 @@ const CoffeeMenu = () => {
           className="kf-title element-anim-1 scroll-animate"
           data-animate="active"
         >
-          Our Burger Menu
+          Our Menu
         </h3>
       </div>
-      <div className="flex flex-col md:flex-row md:flex-wrap lg:flex-nowrap">
-        <div className="flex-1 md:bg-gray-200 mr-4 md:mr-6 lg:mr-8">Item 1</div>
-        <div className="flex-1 md:bg-gray-200">Item 2</div>
+      <div className="grid-container">
+        {images.map((src, index) => (
+          <div className="grid-item" key={index}>
+            <img src={src} alt={`Coffee item ${index + 1}`} />
+          </div>
+        ))}
       </div>
     </div>
   );
