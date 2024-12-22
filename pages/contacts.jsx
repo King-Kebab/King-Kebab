@@ -38,12 +38,11 @@ const Contacts = () => {
                   <h5 className="name">Main Location</h5>
                   <ul>
                     <li>
-                    3 Chome 18-28, <br />
-                    Higashijujo,Japan
+                    〒114-0001
+                    東京都北区東十条 3-17-6 チャレンジビル 3F
                     </li>
                     <li>
-                    3 Chome 18-28, <br />
-                      Higashijujo,Japan
+                    3-17-6 Higashijujo, Kita-ku, Tokyo 114-0001 Japan
                     </li>
                   </ul>
                 </div>
@@ -62,7 +61,7 @@ const Contacts = () => {
                   <h5 className="name">Email Address</h5>
                   <ul>
                     <li>
-                    king_corporation@gmail.com <br />
+                    kingcorp2005@gmail.com <br />
                       www.kingcorporation.com
                     </li>
                     <li>
@@ -86,13 +85,11 @@ const Contacts = () => {
                   <h5 className="name">Phone Number</h5>
                   <ul>
                     <li>
-                    +81 80-4168-9192
-                    <br />
-                    07047495251 
+                    03-6903-0048
+                   
                     </li>
                     <li>
-                      ++81 80-4168-9192 <br />
-                      07047495251 
+                    +81-80-4168-9192 
                     </li>
                   </ul>
                 </div>

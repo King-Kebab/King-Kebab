@@ -2,6 +2,7 @@ import VideoPlayer from "@/src/components/VideoPlayer";
 import TestimonialsCarousel from "@/src/components/sliders/TestimonialsCarousel";
 import Layouts from "@/src/layouts/Layouts";
 import Link from "next/link";
+import styles from "@/src/layouts/Header.module.css";
 
 const About = () => {
   return (
@@ -81,14 +82,15 @@ const About = () => {
                   </li>
                 </ul>
               </div>
-              <Link
-                href="menu-coffee"
-                className="kf-btn element-anim-1 scroll-animate"
-                data-animate="active"
-              >
-                <span>our shop</span>
-                <i className="fas fa-chevron-right" />
-              </Link>
+              
+              <div className={styles.header_right}>
+                  <div className={styles.halal_badge}>
+                  <Link href="menu-coffee">
+                   <span>About Us</span>
+                   <i className="fas fa-chevron-right" />
+                    </Link>
+                   </div>
+                </div>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-6 offset-lg-1">
               <div

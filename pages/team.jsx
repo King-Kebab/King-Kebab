@@ -55,17 +55,17 @@ const Team = () => {
                     <div className="label">bowmankf@gmail.com</div>
                     <div className="label">+012 (345) 678 99</div>
                   </div>
-                  <div className="social">
-                    <a href="#">
+                  <div className="social-links">
+                    <a href="#" className="social-link">
                       <i className="fab fa-facebook-f" />
                     </a>
-                    <a href="#">
+                    <a href="#" className="social-link">
                       <i className="fab fa-twitter" />
                     </a>
-                    <a href="#">
+                    <a href="#" className="social-link">
                       <i className="fab fa-linkedin" />
                     </a>
-                    <a href="#">
+                    <a href="#" className="social-link">
                       <i className="fab fa-youtube" />
                     </a>
                   </div>
@@ -87,17 +87,17 @@ const Team = () => {
                     <div className="label">gonzalezkf@gmail.com</div>
                     <div className="label">+012 (345) 678 99</div>
                   </div>
-                  <div className="social">
-                    <a href="#">
+                  <div className="social-links">
+                    <a href="#" className="social-link">
                       <i className="fab fa-facebook-f" />
                     </a>
-                    <a href="#">
+                    <a href="#" className="social-link">
                       <i className="fab fa-twitter" />
                     </a>
-                    <a href="#">
+                    <a href="#" className="social-link">
                       <i className="fab fa-linkedin" />
                     </a>
-                    <a href="#">
+                    <a href="#" className="social-link">
                       <i className="fab fa-youtube" />
                     </a>
                   </div>
@@ -119,17 +119,17 @@ const Team = () => {
                     <div className="label">lawrencekf@gmail.com</div>
                     <div className="label">+012 (345) 678 99</div>
                   </div>
-                  <div className="social">
-                    <a href="#">
+                  <div className="social-links">
+                    <a href="#" className="social-link">
                       <i className="fab fa-facebook-f" />
                     </a>
-                    <a href="#">
+                    <a href="#" className="social-link">
                       <i className="fab fa-twitter" />
                     </a>
-                    <a href="#">
+                    <a href="#" className="social-link">
                       <i className="fab fa-linkedin" />
                     </a>
-                    <a href="#">
+                    <a href="#" className="social-link">
                       <i className="fab fa-youtube" />
                     </a>
                   </div>
@@ -151,17 +151,17 @@ const Team = () => {
                     <div className="label">smithkf@gmail.com</div>
                     <div className="label">+012 (345) 678 99</div>
                   </div>
-                  <div className="social">
-                    <a href="#">
+                  <div className="social-links">
+                    <a href="#" className="social-link">
                       <i className="fab fa-facebook-f" />
                     </a>
-                    <a href="#">
+                    <a href="#" className="social-link">
                       <i className="fab fa-twitter" />
                     </a>
-                    <a href="#">
+                    <a href="#" className="social-link">
                       <i className="fab fa-linkedin" />
                     </a>
-                    <a href="#">
+                    <a href="#" className="social-link">
                       <i className="fab fa-youtube" />
                     </a>
                   </div>
@@ -183,17 +183,17 @@ const Team = () => {
                     <div className="label">whitekf@gmail.com</div>
                     <div className="label">+012 (345) 678 99</div>
                   </div>
-                  <div className="social">
-                    <a href="#">
+                  <div className="social-links">
+                    <a href="#" className="social-link">
                       <i className="fab fa-facebook-f" />
                     </a>
-                    <a href="#">
+                    <a href="#" className="social-link">
                       <i className="fab fa-twitter" />
                     </a>
-                    <a href="#">
+                    <a href="#" className="social-link">
                       <i className="fab fa-linkedin" />
                     </a>
-                    <a href="#">
+                    <a href="#" className="social-link">
                       <i className="fab fa-youtube" />
                     </a>
                   </div>
@@ -215,17 +215,17 @@ const Team = () => {
                     <div className="label">sewardkf@gmail.com</div>
                     <div className="label">+012 (345) 678 99</div>
                   </div>
-                  <div className="social">
-                    <a href="#">
+                  <div className="social-links">
+                    <a href="#" className="social-link">
                       <i className="fab fa-facebook-f" />
                     </a>
-                    <a href="#">
+                    <a href="#" className="social-link">
                       <i className="fab fa-twitter" />
                     </a>
-                    <a href="#">
+                    <a href="#" className="social-link">
                       <i className="fab fa-linkedin" />
                     </a>
-                    <a href="#">
+                    <a href="#" className="social-link">
                       <i className="fab fa-youtube" />
                     </a>
                   </div>
@@ -247,17 +247,17 @@ const Team = () => {
                     <div className="label">williamskf@gmail.com</div>
                     <div className="label">+012 (345) 678 99</div>
                   </div>
-                  <div className="social">
-                    <a href="#">
+                  <div className="social-links">
+                    <a href="#" className="social-link">
                       <i className="fab fa-facebook-f" />
                     </a>
-                    <a href="#">
+                    <a href="#" className="social-link">
                       <i className="fab fa-twitter" />
                     </a>
-                    <a href="#">
+                    <a href="#" className="social-link">
                       <i className="fab fa-linkedin" />
                     </a>
-                    <a href="#">
+                    <a href="#" className="social-link">
                       <i className="fab fa-youtube" />
                     </a>
                   </div>
@@ -279,17 +279,17 @@ const Team = () => {
                     <div className="label">dixonkf@gmail.com</div>
                     <div className="label">+012 (345) 678 99</div>
                   </div>
-                  <div className="social">
-                    <a href="#">
+                  <div className="social-links">
+                    <a href="#" className="social-link">
                       <i className="fab fa-facebook-f" />
                     </a>
-                    <a href="#">
+                    <a href="#" className="social-link">
                       <i className="fab fa-twitter" />
                     </a>
-                    <a href="#">
+                    <a href="#" className="social-link">
                       <i className="fab fa-linkedin" />
                     </a>
-                    <a href="#">
+                    <a href="#" className="social-link">
                       <i className="fab fa-youtube" />
                     </a>
                   </div>

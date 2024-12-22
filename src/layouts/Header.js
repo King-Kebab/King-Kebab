@@ -1,160 +1,109 @@
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
-import { stickyNav } from "../utils";
+import { useRouter } from "next/router";
+import styles from "./Header.module.css";
 
 const Header = () => {
+  const [isSticky, setIsSticky] = useState(false);
+  const [mobileMenu, setMobileMenu] = useState(false);
+  const router = useRouter();
+
   useEffect(() => {
-    stickyNav();
+    const handleScroll = () => {
+      setIsSticky(window.scrollY > 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const [toggle, setToggle] = useState(false);
+  const toggleMobileMenu = () => {
+    setMobileMenu(!mobileMenu);
+    document.body.style.overflow = !mobileMenu ? "hidden" : "visible";
+  };
 
-  useEffect(() => {
-    if (document.querySelector("header").className.includes("animated")) {
-      setTimeout(() => {
-        document.querySelector("header").classList.add("opened", "show");
-      }, 800);
-    }
-  }, [toggle]);
-
-  const [activeMenu, setActiveMenu] = useState("");
-  const activeMenuSet = (value) =>
-      setActiveMenu(activeMenu === value ? "" : value),
-    activeLi = (value) =>
-      value === activeMenu ? { display: "block" } : { display: "none" };
+  const closeMobileMenu = () => {
+    setMobileMenu(false);
+    document.body.style.overflow = "visible";
+  };
 
   return (
-    <header className={`kf-header ${toggle ? "animated" : ""}`}>
-      {/* navbar */}
-      <div className="kf-navbar">
-        <div className="row">
-          <div className="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-            {/* logo */}
-            <div className="">
+    <header className={`${styles.header} ${isSticky ? styles.sticky : ""}`}>
+      <div className={styles.header_inner}>
+        <div className="container">
+          <div className={styles.header_wrapper}>
+            <div className={styles.logo}>
               <Link href="/">
-                <img src="/images/logo.svg" alt="logo" />
+                <Image
+                  src="/images/logo.svg"
+                  alt="King Kebab"
+                  width={150}
+                  height={75}
+                  priority
+                />
               </Link>
             </div>
-          </div>
-          <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6 align-center">
-            {/* main menu */}
-            <div className="kf-main-menu">
-              <ul>
-                <li className="px-3">
-                  <Link href="/">Home</Link>
-                </li>
 
-                <li className="px-3">
-                  <Link href="about">Our SHop</Link>
-                  <i className="las la-angle-down" />
-                  <ul>
+            <nav className={`${styles.nav_menu} ${mobileMenu ? styles.active : ""}`}>
+              <ul className={styles.nav_list}>
+                <li className={router.pathname === "/" ? styles.active : ""}>
+                  <Link href="/" onClick={closeMobileMenu}>
+                    Home
+                  </Link>
+                </li>
+                <li className={router.pathname === "/about" ? styles.active : ""}>
+                  <Link href="/about" onClick={closeMobileMenu}>
+                    About Us
+                  </Link>
+                </li>
+                <li className={styles.has_dropdown}>
+                  <span className={styles.nav_link}>Our Shops</span>
+                  <ul className={styles.dropdown_menu}>
                     <li>
-                      <Link href="kebab-akabane"> King Kebab Akabane</Link>
-                    </li>
-                    <li>
-                      <Link href="kebab-jujo">king Kebab Juju</Link>
-                    </li>
-                    <li>
-                      <Link href="kebab-higashijujo">
-                        king Kebab Higashijujo
+                      <Link href="/kebab-akabane" onClick={closeMobileMenu}>
+                        King Kebab Akabane
                       </Link>
                     </li>
                     <li>
-                      <Link href="">Comming Soon....</Link>
+                      <Link href="/kebab-jujo" onClick={closeMobileMenu}>
+                        King Kebab Jujo
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/kebab-higashijujo" onClick={closeMobileMenu}>
+                        King Kebab Higashijujo
+                      </Link>
                     </li>
                   </ul>
                 </li>
-                <li className="px-3">
-                  <Link href="about">ABOUT US</Link>
-                </li>
-                <li className="px-3">
-                  <Link href="contacts">Contacts</Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="col-xs-12 col-sm-6 col-md-3 col-lg-3 align-right">
-            {/* menu btn */}
-            <a
-              href="#"
-              className={`kf-menu-btn ${toggle ? "active" : ""}`}
-              onClick={() => setToggle(!toggle)}
-            >
-              <span />
-            </a>
-            {/* btn */}
-          </div>
-        </div>
-      </div>
-      {/* mobile navbar */}
-      <div className="kf-navbar-mobile">
-        {/* mobile menu */}
-        <div className="kf-main-menu">
-          <ul>
-            <li>
-              <Link href="/">Home</Link>
-            </li>
-            <li className="has-children" onClick={() => activeMenuSet("Menu")}>
-              <Link href="">OUR SHOPS</Link>
-              <i className="las la-angle-down" />
-              <ul style={activeLi("Menu")}>
-                <li>
-                  <Link href="kebab-akabane"> King Kebab Akabane</Link>
-                </li>
-                <li>
-                  <Link href="kebab-jujo">king Kebab Juju</Link>
-                </li>
-                <li>
-                  <Link href="kebab-higashijujo">king Kebab Higashijujo</Link>
-                </li>
-                <li>
-                  <Link href="">Comming Soon</Link>
+                <li className={router.pathname === "/contacts" ? styles.active : ""}>
+                  <Link href="/contacts" onClick={closeMobileMenu}>
+                    Contact
+                  </Link>
                 </li>
               </ul>
-            </li>
+            </nav>
 
-            <li>
-              <Link href="about">ABOUT</Link>
-            </li>
-            <li>
-              <Link href="contacts">Contacts</Link>
-            </li>
-          </ul>
-        </div>
-        {/* mobile topline */}
-        <div className="kf-topline">
-          <div className="row">
-            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              {/* social */}
-              <div className="kf-h-social">
-                <a href="facebook.com" target="blank">
-                  <i className="fab fa-facebook-f" />
-                </a>
-                <a href="twitter.com" target="blank">
-                  <i className="fab fa-twitter" />
-                </a>
-                <a href="instagram.com" target="blank">
-                  <i className="fab fa-instagram" />
-                </a>
-                <a href="youtube.com" target="blank">
-                  <i className="fab fa-youtube" />
-                </a>
+            <div className={styles.header_right}>
+              <div className={styles.halal_badge}>
+                <Image
+                  src="/assets/images/halal.png"
+                  alt="Halal Certified"
+                  width={40}
+                  height={40}
+                />
+                <span>Halal Certified</span>
               </div>
-            </div>
-            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              {/* hours */}
-              <div className="kf-h-group">
-                <i className="far fa-clock" /> <em>opening hours :</em> 08:00 am
-                - 09:00 pm
-              </div>
-            </div>
-            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              {/* location */}
-              <div className="kf-h-group">
-                <i className="fas fa-map-marker-alt" /> <em>Location :</em> 55
-                main street, new york
-              </div>
+              
+              <button
+                className={`${styles.hamburger} ${mobileMenu ? styles.active : ""}`}
+                onClick={toggleMobileMenu}
+              >
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
             </div>
           </div>
         </div>
@@ -162,4 +111,5 @@ const Header = () => {
     </header>
   );
 };
+
 export default Header;

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "@/src/layouts/Header.module.css";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -152,12 +153,15 @@ const ContactForm = () => {
                 </div>
               </div>
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div className="kf-bts">
-                  <button type="submit" className="kf-btn">
-                    <span>Send us message</span>
-                    <i className="fas fa-chevron-right" />
-                  </button>
-                </div>
+              <div className={styles.header_right}>
+                  <div className={styles.halal_badge}>
+                  
+                   <span>Send Us Message</span>
+                   <i className="fas fa-chevron-right" />
+                    
+                   </div>
+                
+              </div>
               </div>
             </div>
           </form>

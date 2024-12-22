@@ -1,0 +1,345 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--background);
+  transition: all 0.3s ease;
+  border-bottom: 2px solid var(--primary);
+}
+
+.header.sticky {
+  background: var(--background);
+  box-shadow: 0 5px 20px rgba(255, 78, 78, 0.2);
+}
+
+.header_inner {
+  padding: 15px 0;
+}
+
+.header_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  flex: 0 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.nav_menu {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav_list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav_list > li {
+  padding: 0 25px;
+  position: relative;
+}
+
+.nav_list li a,
+.nav_link {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  display: block;
+  padding: 10px 0;
+  transition: all 0.3s ease;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav_list li.active a {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.nav_list li a:hover {
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.has_dropdown {
+  position: relative;
+}
+
+.has_dropdown .nav_link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.has_dropdown .nav_link:after {
+  content: '▼';
+  font-size: 8px;
+  color: var(--primary);
+  transition: transform 0.3s ease;
+}
+
+.has_dropdown:hover .nav_link:after {
+  transform: rotate(180deg);
+}
+
+.dropdown_menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--background);
+  min-width: 280px;
+  padding: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(255, 78, 78, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.has_dropdown:hover .dropdown_menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(10px);
+}
+
+.dropdown_menu li {
+  padding: 0;
+  list-style: none;
+}
+
+.dropdown_menu li a {
+  padding: 12px 25px;
+  font-size: 14px;
+  color: var(--text-light) !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+  background: transparent;
+  display: block;
+  width: 100%;
+}
+
+.dropdown_menu li a:hover {
+  color: var(--primary) !important;
+  padding-left: 30px;
+  background: var(--background-light);
+}
+
+.header_right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.halal_badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 15px;
+  background: var(--gradient-primary);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-primary);
+}
+
+.halal_badge span {
+  color: var(--text-light);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.halal_badge:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(255, 78, 78, 0.4);
+}
+
+.phone_link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 20px;
+  border-radius: 25px;
+  background: var(--gradient-primary);
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-primary);
+}
+
+.phone_link:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(128, 0, 32, 0.4);
+  text-decoration: none;
+}
+
+.phone_link i {
+  font-size: 20px;
+  color: var(--text-light);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 2000;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--text-light);
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+@media (max-width: 991px) {
+  .nav_menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background: var(--background);
+    padding: 100px 30px 30px;
+    transition: all 0.4s ease;
+    overflow-y: auto;
+    border-left: 2px solid var(--primary);
+  }
+
+  .nav_menu.active {
+    right: 0;
+  }
+
+  .nav_list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav_list > li {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .nav_list li a,
+  .nav_link {
+    padding: 12px 20px;
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .dropdown_menu {
+    position: static;
+    width: 100%;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    padding: 10px 0 10px 20px;
+    margin-top: 10px;
+    border-left: 2px solid var(--primary);
+  }
+
+  .dropdown_menu li {
+    padding: 8px 0;
+    list-style: none;
+  }
+
+  .dropdown_menu li a {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .hamburger {
+    display: flex;
+    position: relative;
+    z-index: 2000;
+  }
+
+  .hamburger span {
+    background: var(--text-light);
+  }
+
+  .header_right {
+    gap: 15px;
+  }
+
+  .halal_badge {
+    padding: 6px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .halal_badge span {
+    display: none;
+  }
+
+  .halal_badge img {
+    width: 28px !important;
+    height: 28px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .header_inner {
+    padding: 10px 0;
+  }
+
+  .logo img {
+    width: 120px;
+    height: auto;
+  }
+
+  .halal_badge {
+    width: 35px;
+    height: 35px;
+  }
+
+  .halal_badge img {
+    width: 24px !important;
+    height: 24px !important;
+  }
+}
