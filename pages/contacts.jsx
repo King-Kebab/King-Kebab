@@ -1,6 +1,7 @@
 import InstaCarousel from "@/src/components/sliders/InstaCarousel";
 import Layouts from "@/src/layouts/Layouts";
 import ContactForm from "@/src/components/ContactForm";
+import Image from "next/image";
 
 const Contacts = () => {
   return (
@@ -99,76 +100,38 @@ const Contacts = () => {
         </div>
       </section>
       {/* Section Contacts Form */}
-      <ContactForm/>
-      {/* <section className="section kf-contacts-form">
-        <div className="container">
-          <div
-            className="kf-reservation-form element-anim-1 scroll-animate"
-            data-animate="active"
-          >
-            <div className="kf-titles align-center">
-              <div className="kf-subtitle">Contact Us</div>
-              <h3 className="kf-title">Send Us Message</h3>
-            </div>
-            <form id="cform" method="post">
-              <div className="row">
-                <div className="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-                  <div className="kf-field">
-                    <input type="text" name="name" placeholder="Full Name" />
-                    <i className="far fa-user" />
-                  </div>
-                </div>
-                <div className="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-                  <div className="kf-field">
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="Email Address"
-                    />
-                    <i className="fas fa-at" />
-                  </div>
-                </div>
-                <div className="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-                  <div className="kf-field">
-                    <input type="tel" name="tel" placeholder="Phone Number" />
-                    <i className="fas fa-mobile-alt" />
-                  </div>
-                </div>
-                <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                  <div className="kf-field">
-                    <input type="text" name="subject" placeholder="Subject" />
-                  </div>
-                </div>
-                <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                  <div className="kf-field">
-                    <textarea
-                      name="message"
-                      placeholder="Message"
-                      defaultValue={""}
-                    />
-                  </div>
-                </div>
-                <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                  <div className="kf-bts">
-                    <a
-                      href="#"
-                      className="kf-btn"
-                      onclick="$('#cform').submit(); return false;"
-                    >
-                      <span>Send us message</span>
-                      <i className="fas fa-chevron-right" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </form>
-            <div className="alert-success" style={{ display: "none" }}>
-              <p>Thanks, your message is sent successfully.</p>
-            </div>
-          </div>
+      <section className="section">
+  <div className="container">
+    <div className="row align-items-center">
+      <div className="col-lg-6">
+        <Image
+          src="/assets/images/contact.JPG"
+          alt="Contact Us" 
+          width={600}
+          height={400}
+          style={{
+            maxWidth: '100%',
+            height: 'auto',
+            borderRadius: '8px',
+            boxShadow: '0 4px 8px rgba(0,0,0,0.2)'
+          }}
+        />
+      </div>
+      <div className="col-lg-6">
+        <div style={{ padding: '20px' }}>
+          <h3 style={{ marginBottom: '20px' }}>Get In Touch</h3>
+          <p>
+            Have questions about our services? Want to make a reservation? 
+            We're here to help you and answer any questions you might have.
+          </p>
         </div>
-      </section> */}
-      {/* Section Insta Carousel */}
+      </div>
+    </div>
+  </div>
+</section>
+      
+      <ContactForm/>
+      
       
     </Layouts>
   );
